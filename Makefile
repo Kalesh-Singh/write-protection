@@ -1,5 +1,5 @@
 CC = clang
-CFLAGS = -Wall -Wextra -std=c11 -g -z separate-loadable-segments -z max-page-size=4096 -march=armv8.4-a
+CFLAGS = -Wall -Wextra -std=c11 -g -z separate-loadable-segments -z max-page-size=4096 -march=armv8.4-a -lm
 LDFLAGS = -fuse-ld=lld
 TARGET = write-protect
 SRCS = write-protect.c memfd-helpers.c range-map.c signal-helpers.c bss-helpers.c
